@@ -2,7 +2,7 @@
 <% @pessoa.errors.full_messages.each do |message| %>
 <%= message %>
 <% end %>
-<%= form_for @pessoa, url:'pessoas#update' do |f| %>
+<%= form_for @pessoa, url:cadastro_pessoa_path(@pessoa) do |f| %>
 <%= f.label :nome %> <br>
 <%= f.text_field :nome %>
 <br>
