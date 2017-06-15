@@ -7,7 +7,7 @@
     <%= f.text_field :nome %>
     <br>
     <%= f.label :setpr %> <br>
-    <%= f.text_field :setor %>
+    <%= f.collection_select :setor_id, @setores, :id, :nome %>
     <br><br>
     <%= f.submit "Editar"%>
     <%= link_to 'Deletar', cadastro_empresa_path(@empresa), method: :delete, data: { confirm: "Tem certeza que deseja remover #{@empresa.nome}?" } %>

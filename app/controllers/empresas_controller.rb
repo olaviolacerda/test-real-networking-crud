@@ -8,6 +8,7 @@ class EmpresasController < ApplicationController
 
   def new
     @empresa = Empresa.new
+    @setores = Setor.all
   end
 
   def create
