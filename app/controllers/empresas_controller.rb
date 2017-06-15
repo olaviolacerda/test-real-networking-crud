@@ -15,7 +15,6 @@ class EmpresasController < ApplicationController
     @empresa = Empresa.new(empresa_params)
     if @empresa.save
       flash[:notice] = "A empresa #{@empresa.nome} foi criada com sucesso"
-
       redirect_to root_path
     else
       render 'new'
@@ -24,6 +23,7 @@ class EmpresasController < ApplicationController
 
   def edit
     @empresas = Empresa.all
+    @setores = Setor.all
     render :edit
   end
 
@@ -49,6 +49,6 @@ class EmpresasController < ApplicationController
 
 
   def empresa_params
-    params.require(:empresa).permit :nome, :setor
+    params.require(:empresa).permit :nome, :setor_id
   end
 end
