@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>DesafioReal</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>DesafioReal</title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+</head>
 
-  <body>
-    <%= link_to "Pessoa", root_path %>
-    <%= link_to "Novo cadastro", new_pessoa_path %>
+<body>
+  <header>
+    <%= link_to "Cadastro", root_path %>
+  </header>
+  <div class="container">
+
     <%= yield %>
-  </body>
+  </div>
+  <br>
+  <em><span style="font-size:9pt;">Desenvolvido por Olavio Lacerda</span></em>
+</body>
+<script type="text/javascript">
+console.log("Espero que eu consiga =)");
+</script>
 </html>

@@ -1,0 +1,9 @@
+<%= form_for @empresa, url: '/cadastros/:cadastro_id/empresas' do |f| %>
+<%= f.label :nome %> <br>
+<%= f.text_field :nome %>
+<br>
+<%= f.label :setor %> <br>
+<%= f.text_field :setor %>
+<br><br>
+<%= f.submit %>
+<% end %>

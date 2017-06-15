@@ -1,3 +1,5 @@
 <h1>Add pessoa</h1>
-
+<% @pessoa.errors.full_messages.each do |message| %>
+<p> <%= message %></p>
+<% end %>
 <%= render 'form' %>

@@ -1,15 +1,96 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
+@import url('https://fonts.googleapis.com/css?family=Overpass');
+* {
+  font-family: 'Overpass', sans-serif;
+}
+body {
+  width: 20%;
+  /*padding-left: 10%;*/
+  /*padding-right: 50%;*/
+  align-items: center;
+  text-align: center;
+}
+.container {
+  text-align: center;
+  position: relative;
+}
+a {
+  color: lightblue;
+}
+a:hover {
+  transition: ease-out 0.5s;
+  opacity: 0.7;
+}
+a:visited {
+  color: black;
+  text-decoration-line: overline;
+}
+a[data-method=delete] {
+  position: relative;
+  border-style: none;
+	border-radius: 10px;
+	color: #FFF;
+	text-decoration: none;
+  background-color: #d14242;
+  font-family: inherit;
+  font-size: inherit;
+  min-width: 15em;
+  outline: none;
+  padding: 5px;
+}
+
+input {
+  background-color: white;
+  border-radius: 1em;
+  border: 2px solid lightgray;
+  box-sizing: border-box;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  min-width: 15em;
+  outline: none;
+  padding: 5px;
+}
+input:hover {
+  border-color: silver;
+}
+input:focus {
+  border-color: darkgray;
+}
+
+input[type=submit] {
+  position: relative;
+  border-style: none;
+	border-radius: 10px;
+	color: #FFF;
+	text-decoration: none;
+  background-color: #82BF56;
+}
+
+input[type=submit]:hover, a[data-method=delete]:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  transition: ease 0.5s;
+}
+
+header {
+  background-color: snow;
+  top: 0;
+  border: 2px solid lightgray;
+  outline: none;
+  text-align: center;
+}

@@ -1,3 +1,15 @@
-<h1>Add pessoa</h1>
+<h1>Editar pessoa</h1>
+<% @pessoa.errors.full_messages.each do |message| %>
+<%= message %>
+<% end %>
+<%= form_for @pessoa, url:'pessoas#update' do |f| %>
+<%= f.label :nome %> <br>
+<%= f.text_field :nome %>
+<br>
+<%= f.label :email %> <br>
+<%= f.text_field :email %>
+<br><br>
+<%= f.submit "Editar"%>
+<%= link_to 'Deletar', cadastro_pessoa_path(@pessoa), method: :delete, data: { confirm: "Tem certeza que deseja remover #{@pessoa.nome}?" } %>
 
-<%= render 'form' %>
+<% end %>

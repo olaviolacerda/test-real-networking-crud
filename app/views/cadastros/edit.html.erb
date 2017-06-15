@@ -1,0 +1,7 @@
+<h1>edit cadastro</h1>
+<% @pessoa = Pessoa.all.last%>
+<% pessoa_path = "pessoas/#{@pessoa.id}/edit"%>
+<% @empresa = Empresa.all.last %>
+<% empresa_path = "empresas/#{@empresa.id}/edit" %>
+<%= link_to "Seu cadastro", pessoa_path %> |
+<%= link_to "Cadastro empresa", empresa_path %>
