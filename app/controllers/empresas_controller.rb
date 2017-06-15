@@ -28,6 +28,7 @@ class EmpresasController < ApplicationController
   end
 
   def update
+    @setores = Setor.all
     if @empresa.update(empresa_params)
       redirect_to root_path
     else
