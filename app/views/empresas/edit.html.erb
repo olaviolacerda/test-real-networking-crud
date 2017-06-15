@@ -1,15 +1,16 @@
 <h1>edit empresa</h1>
 <% @empresa.errors.full_messages.each do |message| %>
   <%= message %>
-  <% end %>
-  <%= form_for @empresa, url:'empresas#update' do |f| %>
+<% end %>
+
+  <%= form_for @empresa, url: cadastro_empresa_path(@empresa) do |f| %>
     <%= f.label :nome %> <br>
     <%= f.text_field :nome %>
     <br>
-    <%= f.label :setpr %> <br>
+    <%= f.label :setor %> <br>
     <%= f.collection_select :setor_id, @setores, :id, :nome %>
     <br><br>
-    <%= f.submit "Editar"%>
+    <%= f.submit "Editar", method: :update %>
     <%= link_to 'Deletar', cadastro_empresa_path(@empresa), method: :delete, data: { confirm: "Tem certeza que deseja remover #{@empresa.nome}?" } %>
 
-    <% end %>
+  <% end %>

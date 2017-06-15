@@ -11,6 +11,10 @@ class EmpresasController < ApplicationController
     @setores = Setor.all
   end
 
+def to_model
+  @empresa.id = Empresa.find(params[:id])
+end
+
   def create
     @empresa = Empresa.new(empresa_params)
     if @empresa.save
