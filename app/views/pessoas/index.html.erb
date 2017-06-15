@@ -1,0 +1,6 @@
+<% @pessoas.each do |pessoa| %>
+  <h2><%= pessoa.nome %></h2>
+  <h2><%= pessoa.email %></h2>
+  <br>
+  <%= link_to "Mostra pessoas", pessoa%>
+<% end %>
