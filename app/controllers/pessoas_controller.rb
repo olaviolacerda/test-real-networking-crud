@@ -25,7 +25,7 @@ class PessoasController < ApplicationController
 
   def update
     if @pessoa.update(pessoa_params)
-      redirect_to root_path
+      redirect_to root_path, notice: "Pessoa atualizada com sucesso"
     else
       render :edit
     end
@@ -45,6 +45,6 @@ class PessoasController < ApplicationController
   end
 
   def pessoa_params
-    params.require(:pessoa).permit :nome, :email
+    params.require(:pessoa).permit :nome, :email, :id
   end
 end

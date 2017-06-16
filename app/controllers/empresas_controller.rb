@@ -11,10 +11,6 @@ class EmpresasController < ApplicationController
     @setores = Setor.all
   end
 
-def to_model
-  @empresa.id = Empresa.find(params[:id])
-end
-
   def create
     @empresa = Empresa.new(empresa_params)
     if @empresa.save
@@ -34,7 +30,7 @@ end
   def update
     @setores = Setor.all
     if @empresa.update(empresa_params)
-      redirect_to root_path
+      redirect_to root_path, notice: 'Empresa atualizada com sucesso'
     else
       render :edit
     end
@@ -54,6 +50,6 @@ end
 
 
   def empresa_params
-    params.require(:empresa).permit :nome, :setor_id
+    params.require(:empresa).permit :nome, :setor_id, :id
   end
 end
