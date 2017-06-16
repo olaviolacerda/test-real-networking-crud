@@ -9,17 +9,14 @@
 </head>
 
 <body>
-  <header>
-    <%= link_to "Cadastro", root_path %>
-  </header>
   <div class="container">
-
+    <%= react_component("Header") %>
     <%= yield %>
   </div>
-  <br>
-  <em><span style="font-size:9pt;">Desenvolvido por Olavio Lacerda</span></em>
 </body>
 <script type="text/javascript">
-  console.log("Espero que eu consiga =)");
+console.log("Espero que eu consiga =)");
+console.log("Copyright (c) 2017 Copyright Holder All Rights Reserved to Olavio Lacerda.");
+
 </script>
 </html>

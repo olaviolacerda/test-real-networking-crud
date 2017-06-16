@@ -1,8 +1,10 @@
-<h1>edit empresa</h1>
+<br>
+<h1>Edite sua empresa na RN!</h1>
+<br><hr><br>
 <% @empresa.errors.full_messages.each do |message| %>
 <%= message %>
 <% end %>
-
+<%= render 'title'%>
 <%= form_for @empresa, url: cadastro_empresa_path(@empresa) do |f| %>
 <%= f.label :nome %> <br>
 <%= f.text_field :nome %>

@@ -1,6 +1,8 @@
-<h1>Add pessoa</h1>
+<%= render 'title'%>
+<br>
+<h3>Cadastre seu usuário e faça parte da RN!</h3>
+<br><hr><br>
 <% @pessoa.errors.full_messages.each do |message| %>
 <p> <%= message %></p>
 <% end %>
 <%= render 'form' %>
-

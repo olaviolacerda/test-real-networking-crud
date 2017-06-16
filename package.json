@@ -1,5 +1,8 @@
 {
   "name": "desafio_real",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "react-router": "^4.1.1",
+    "yard": "^1.0.3"
+  }
 }

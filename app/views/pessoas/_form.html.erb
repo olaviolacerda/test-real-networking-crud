@@ -1,9 +1,11 @@
 <%= form_for @pessoa, url: '/cadastros/:cadastro_id/pessoas' do |f| %>
-<%= f.label :nome %> <br>
+<p>Seu nome:</p>
 <%= f.text_field :nome %>
 <br>
-<%= f.label :email %> <br>
+<br>
+<p>Seu email:</p>
+
 <%= f.text_field :email %>
 <br><br>
-<%= f.submit %>
+<%= f.submit  'Salvar' %>
 <% end %>
