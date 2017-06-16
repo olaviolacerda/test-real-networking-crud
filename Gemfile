@@ -18,7 +18,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'therubyracer', platforms: :ruby
 #react
 gem "react-rails"
-gem 'webpacker', git: 'https://github.com/rails/webpacker.git'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
