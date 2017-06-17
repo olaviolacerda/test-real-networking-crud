@@ -21,37 +21,104 @@ License: none (public domain)
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500|Roboto:400,500,700');
 body {
-  /*padding-left: 10%;*/
-  /*padding-right: 50%;*/
-  align-items: center;
+  transition: transform 0.3s;
+  margin: 0;
   text-align: center;
   background-color: #edeced;
+  overflow-x: hidden;
 }
 
 .navbar {
   font-family: 'Montserrat', sans-serif;
+  top: 0;
   font-size: 28pt;
   color: white;
   background: #11698d;
   align-items: center;
-  padding: 1em;
+  text-align: center;
+  height: 2em;
+  padding: 0.3em;
   background: -webkit-linear-gradient(left, #2381a7 , #244283);
   background: -o-linear-gradient(right, #2381a7, #244283);
   background: -moz-linear-gradient(right, #2381a7, #244283);
   background: linear-gradient(to right, #2381a7 , #244283);
 }
+p.navbar {
+  margin-left: 30%;
+  float: left;
+}
+.ne-links {
 
-.navbar-default {
+}
+a.ne-links, .opcao, .bemvindo {
+  color: darkgrey;
+  border-bottom: 0.1em solid darkgrey;
+  height: 3em;
+  width: 60%;
+  margin: 0;
+}
+.row, .container-fluid{
+  text-align: center;
 
 }
 
-.arrow {
-
+input, select, textarea, option {
+  background-color: white;
+  border-radius: 1em;
+  border:  0.125em solid lightgray;
+  color: inherit;
+  font-family: 'Roboto', sans-serif;
+  font-size: 22pt;
+  outline: none;
+  padding: 0.2125em;
 }
 
-.opcao {
+input:hover, select:hover, textarea:hover, option {
+  border-color: silver;
+}
+input:focus, select:focus, textarea:focus, option {
+  border-color: darkgray;
+}
+.links-cadastro {
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 21pt;
+  color:#17969E;
+  background: snow;
+  border: 0.25em solid #17969E;
+  padding: 0.625em;
+  text-align: center;
+  float: left;
 
 }
+.links-cadastro:hover {
+  color: snow;
+  background: #17969E;
+  transition: ease-out 0.5s;
+}
+.links-cadastro:focus {
+  text-decoration:none;
+}
+a.links-cadastro{
+  color: snow;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 21pt;
+}
+
+#pessoas {
+  border-radius: 2.1875em 0 0 2.1875em;
+}
+
+#empresas {
+  border-radius: 0 2.1875em 2.1875em 0;
+}
+.ne-links {
+  text-transform: uppercase;
+}
+
+
+
 
 
 /*
@@ -80,36 +147,7 @@ background-color: white;
 .links-cadastro a:focus {
 background-color: white;
 }
-a.links-pe {
-text-decoration: none;
-font-family: 'Montserrat', sans-serif;
-font-size: 21pt;
-color:#17969E;
-background: snow;
-border: 0.25em solid #17969E;
-padding: 0.625em;
-text-align: center;
-float: left;
-width:25%
 
-}
-a.links-pe:hover {
-color: snow;
-background: #17969E;
-text-decoration: none;
-transition: ease-out 0.5s;
-}
-a.links-pe:focus {
-text-decoration:none;
-}
-#pessoa {
-border-radius: 2.1875em 0 0 2.1875em;
-margin-left: 7em;
-}
-
-#empresa {
-border-radius: 0 2.1875em 2.1875em 0;
-}
 
 a[data-method=delete] {
 position: relative;
@@ -193,30 +231,21 @@ left: 1em;
 .fundo1:focus, .fundo1:active, .fundo2:focus, .fundo2:active {
 background-color: white;
 }
-.cadastro {
-font-family: 'Montserrat', sans-serif;
-font-size: 28pt;
-font-weight: 550;
-margin-left: 9em;
-float: left;
-
-}
-.font-nove {
-font-size: 9pt;
-}
-
-p{
-text-align: left;
-margin-left: 5.5em;
-font-family: 'Roboto', sans-serif;
-font-size: 22pt;
-}*/
-.arrow {
+*/
+#cadastro {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28pt;
+  position: relative;
   top: 0;
-  font-size: 3em;
+  left: 21em;
+  float: left;
+}
+#arrow {
+  top: 0;
   float: left;
   color: snow;
-  margin-left: 0.5em;
+  height: 2em;
+  margin-left: 0.6em;
 }
 .burg {
 
@@ -233,28 +262,8 @@ font-size: 22pt;
 .bar:last-child {margin-bottom: 0px;}
 
 
-/*queries*/
-@media screen and (max-width: 980px) {
-
-  body{
-    width: 100%;
-  }
-
-}
-
-@media screen and (max-width: 700px) {
-
-  body{
-    width: 100%;
-  }
-
-}
-
-@media screen and (max-width: 480px) {
-
-  body{
-    width: 90%;
-  }
-
-}
-/*fim queries*/
+@media screen and (min-width:320px) { }
+@media screen and (min-width:480px) { }
+@media screen and (min-width:600px) { }
+@media screen and (min-width:768px) { }
+@media screen and (min-width:992px) { }

@@ -8,14 +8,14 @@ class EmpresasController < ApplicationController
 
   def new
     @empresa = Empresa.new
-    @setores = Setor.all
+    @setors = Setor.all
   end
 
   def create
-    @setores = Setor.all
+    @setors = Setor.all
     @empresa = Empresa.new(empresa_params)
     if @empresa.save
-      flash[:notice] = "Olá #{@empresa.nome}, você concluiu seu cadastro com sucesso."
+      flash[:alert] = "Olá #{@empresa.nome}, você concluiu seu cadastro com sucesso."
       redirect_to root_path
     else
       render 'new'
@@ -24,14 +24,14 @@ class EmpresasController < ApplicationController
 
   def edit
     @empresas = Empresa.all
-    @setores = Setor.all
+    @setors = Setor.all
     render :edit
   end
 
   def update
-    @setores = Setor.all
+    @setors = Setor.all
     if @empresa.update(empresa_params)
-      redirect_to root_path, notice: 'Seu cadastro foi atualizado com sucesso.'
+      redirect_to root_path, alert: 'Seu cadastro foi atualizado com sucesso.'
     else
           render :edit
     end
@@ -39,7 +39,7 @@ class EmpresasController < ApplicationController
 
   def destroy
     @empresa.destroy
-    flash[:notice] = "Sentiremos a sua falta #{@empresa.nome}, seu cadastro foi deletado."
+    flash[:alert] = "Sentiremos a sua falta #{@empresa.nome}, seu cadastro foi deletado."
     redirect_to root_path
   end
 

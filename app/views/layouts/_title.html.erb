@@ -1,4 +1,3 @@
-<% noticia = flash[:notice] %>
-<%= react_component "Flash", notice: noticia;%>
+<%= flash.notice %>
 <%= react_component "Links", title: new_cadastro_path, nome: "Novo"; %>
 <%= react_component "Links", title: edit_cadastro_path(:id), nome: "Editar";%>
