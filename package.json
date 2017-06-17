@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "license": "MIT",
   "dependencies": {
+    "react-hamburger-menu": "0.0.4",
     "stats-webpack-plugin": "^0.4.3",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2"

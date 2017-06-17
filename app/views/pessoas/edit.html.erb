@@ -1,19 +1,5 @@
-<br>
-<h1>Edite seu cadastro da RN!</h1>
-<br><hr><br>
-<% @pessoa.errors.full_messages.each do |message| %>
-<%= message %>
-<% end %>
-
-<%= form_for @pessoa , url: cadastro_pessoa_path(@pessoa) do |f| %>
-<p>Seu nome:</p>
-<%= f.text_field :nome %>
-<br>
-<br>
-<p>Seu email:</p>
-<%= f.text_field :email %>
-<br><br>
+<%= render :partial => 'layouts/title'%>
+<%= react_component("editaMessage", title:"seu usuário da") %>
+<%= render partial: 'erros'%>
+<%= render partial: "form", locals: { acao: "update", texto_acao: "Salvar Alterações"}%>
 <%= link_to 'Deletar Usuário', cadastro_pessoa_path(@pessoa), method: :delete, data: { confirm: "Tem certeza que deseja remover #{@pessoa.nome}?" } %>
-<%= f.submit "Salvar Alterações"%>
-
-<% end %>

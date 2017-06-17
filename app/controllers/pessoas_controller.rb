@@ -1,5 +1,5 @@
 class PessoasController < ApplicationController
-  before_action :find_pessoa, only: [:show, :edit, :update, :destroy]
+  before_action :set_pessoa, only: [:show, :edit, :update, :destroy]
 
   def index
     @pessoas = Pessoa.all
@@ -12,7 +12,7 @@ class PessoasController < ApplicationController
   def create
     @pessoa = Pessoa.new(pessoa_params)
     if @pessoa.save
-      flash[:notice] = "A pessoa de nome #{@pessoa.nome} foi criada com sucesso"
+      flash[:notice] = "A pessoa de nome #{@pessoa.nome} foi criada com sucesso."
       redirect_to root_path
     else
       render 'new'
@@ -39,8 +39,7 @@ class PessoasController < ApplicationController
 
 
   private
-
-  def find_pessoa
+  def set_pessoa
     @pessoa = Pessoa.find(params[:id])
   end
 

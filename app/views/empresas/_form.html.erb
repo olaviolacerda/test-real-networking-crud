@@ -1,9 +1,9 @@
-<%= form_for @empresa, url: '/cadastros/:cadastro_id/empresas' do |f| %>
+<%= form_for @empresa, url: {action: acao} do |f| %>
 <%= f.label :nome %> <br>
 <%= f.text_field :nome %>
 <br>
-<%= f.label :setor %> <br>
+<%= f.label :setor_onde_atua_sua_empresa %> <br>
 <%= f.collection_select :setor_id, @setores, :id, :nome %>
 <br><br>
-<%= f.submit %>
+<%= f.submit texto_acao%>
 <% end %>

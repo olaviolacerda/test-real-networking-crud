@@ -1,8 +1,5 @@
-<%= render 'title'%>
-<br>
-<h3>Cadastre seu usuário e faça parte da RN!</h3>
-<br><hr><br>
-<% @pessoa.errors.full_messages.each do |message| %>
-<p> <%= message %></p>
-<% end %>
-<%= render 'form' %>
+<%= render :partial => 'layouts/title'%>
+
+<%= react_component("cadastroMessage", title:"seu usuário") %>
+<%= render 'erros'%>
+<%= render partial: "form", locals: { acao: "create", texto_acao: "Salvar"}%>

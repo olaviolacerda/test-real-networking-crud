@@ -17,46 +17,13 @@ var Header = React.createClass({
     }
   });
 
-
-
-
-  // testando react
-
-  var ListaPessoas = React.createClass({
-    render: function () {
-      var pessoaNodes = this.props.data.map(function (pessoa, index) {
-        return (
-          <Pessoa nome={pessoa.nome} email={pessoa.email} key={index} />
-        );
-      });
-      return (
-        <div className="ListaPessoas">
-        <h1>Lista de Pessoas</h1>
-        {pessoaNodes}
-        </div>
-      );
+  class cadastroMessage extends React.Component {
+    render() {
+      return (<div className="opcao"><p>Cadastre {this.props.title} e faça parte da RN!</p><br/></div>)
     }
-  });
-
-  var Pessoa = React.createClass({
-    render: function() {
-      return (
-        <div className="col-xs-12">
-        <table>
-        <thead>
-        <tr>
-        <th>Nome</th>
-        <th>Email</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-        <td>{this.props.nome}</td>
-        <td>{this.props.email}</td>
-        </tr>
-        </tbody>
-        </table>
-        </div>
-      )
+  }
+  class editaMessage extends React.Component {
+    render() {
+      return (<div className="opcao"><p>Edite {this.props.title} RN!</p><br/></div>)
     }
-  });
+  }

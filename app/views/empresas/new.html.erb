@@ -1,8 +1,4 @@
-<%= render 'title'%>
-<br>
-<h1>Cadastre sua empresa e faça parte da RN!</h1>
-<br><hr><br>.
-<% @empresa.errors.full_messages.each do |message| %>
-<p> <%= message %></p>
-<% end %>
-<%= render 'form' %>
+<%= render :partial => 'layouts/title'%>
+<%= react_component("cadastroMessage", title:"sua empresa") %>
+<%= render 'erros'%>
+<%= render partial: "form", locals: { acao: "create", texto_acao: "Salvar"}%>

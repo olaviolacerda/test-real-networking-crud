@@ -1,18 +1,5 @@
-<br>
-<h1>Edite sua empresa na RN!</h1>
-<br><hr><br>
-<% @empresa.errors.full_messages.each do |message| %>
-<%= message %>
-<% end %>
-<%= render 'title'%>
-<%= form_for @empresa, url: cadastro_empresa_path(@empresa) do |f| %>
-<%= f.label :nome %> <br>
-<%= f.text_field :nome %>
-<br>
-<%= f.label :setor %> <br>
-<%= f.collection_select :setor_id, @setores, :id, :nome %>
-<br><br>
-<%= f.submit "Editar" %>
-<%= link_to 'Deletar', cadastro_empresa_path(@empresa), method: :delete, data: { confirm: "Tem certeza que deseja remover #{@empresa.nome}?" } %>
-
-<% end %>
+<%= render :partial => 'layouts/title'%>
+<%= react_component("editaMessage", title:"sua empresa cadastrada na") %>
+<%= render 'erros'%>
+<%= render partial: "form", locals: { acao: "update", texto_acao: "Salvar Alterações"}%>
+<%= link_to 'Deletar Empresa', cadastro_empresa_path(@empresa), method: :delete, data: { confirm: "Tem certeza que deseja remover #{@empresa.nome}?" } %>

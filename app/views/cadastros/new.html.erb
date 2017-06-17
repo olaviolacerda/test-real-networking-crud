@@ -1,4 +1,3 @@
-<!-- <h1>new cadastro</h1> -->
-<%= render 'title'%>
+<%= render :partial => 'layouts/title'%>
 <%= link_to "Seu cadastro", new_cadastro_pessoa_path(:cadastro_id) , id:"pessoa", class:"links-pe" %>
 <%= link_to "Cadastro empresa", new_cadastro_empresa_path(:cadastro_id), id:"empresa", class:"links-pe" %>

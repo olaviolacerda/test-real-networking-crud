@@ -1,6 +1,6 @@
 class EmpresasController < ApplicationController
 
-  before_action :find_empresa, only: [:show, :edit, :update, :destroy]
+  before_action :set_empresa, only: [:show, :edit, :update, :destroy]
 
   def index
     @empresas = Empresa.all
@@ -12,9 +12,10 @@ class EmpresasController < ApplicationController
   end
 
   def create
+    @setores = Setor.all
     @empresa = Empresa.new(empresa_params)
     if @empresa.save
-      flash[:notice] = "A empresa #{@empresa.nome} foi criada com sucesso"
+      flash[:notice] = "A empresa #{@empresa.nome} foi criada com sucesso."
       redirect_to root_path
     else
       render 'new'
@@ -30,9 +31,9 @@ class EmpresasController < ApplicationController
   def update
     @setores = Setor.all
     if @empresa.update(empresa_params)
-      redirect_to root_path, notice: 'Empresa atualizada com sucesso'
+      redirect_to root_path, notice: 'Empresa atualizada com sucesso.'
     else
-      render :edit
+          render :edit
     end
   end
 
@@ -44,7 +45,7 @@ class EmpresasController < ApplicationController
 
   private
 
-  def find_empresa
+  def set_empresa
     @empresa = Empresa.find(params[:id])
   end
 

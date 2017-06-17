@@ -1,4 +1,7 @@
 class CadastrosController < ApplicationController
+	def index
+		
+	end
 	def edit
 		encontra_ultima_pessoa
 		encontra_ultima_empresa
@@ -14,5 +17,5 @@ class CadastrosController < ApplicationController
 		@empresa = Empresa.all.last
 	end
 
-	
+
 end

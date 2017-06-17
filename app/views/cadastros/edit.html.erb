@@ -1,5 +1,4 @@
-<!-- <h1>edit cadastro</h1> -->
-<%= render 'title'%>
+<%= render :partial => 'layouts/title'%>
 <% pessoa_path = "pessoas/#{@pessoa.id}/edit"%>
 <% empresa_path = "empresas/#{@empresa.id}/edit" %>
 <%= link_to "Seu cadastro", pessoa_path, id:"pessoa", class:"links-pe"%> |
