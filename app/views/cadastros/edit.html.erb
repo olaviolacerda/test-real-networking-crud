@@ -1,5 +1,3 @@
 <%= render :partial => 'layouts/title'%>
-<% pessoa_path = "pessoas/#{@pessoa.id}/edit"%>
-<% empresa_path = "empresas/#{@empresa.id}/edit" %>
-<%= link_to "Seu cadastro", pessoa_path, id:"pessoa", class:"links-pe"%> |
-<%= link_to "Cadastro empresa", empresa_path, id:"empresa", class:"links-pe" %>
+<%= react_component "OpcoesEdit", tipo: 'pessoas', id: @pessoa.id, nome: "Seu Cadastro"%>
+<%= react_component "OpcoesEdit", tipo: 'empresas', id: @empresa.id, nome: "Cadastro Empresa"%>
