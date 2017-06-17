@@ -17,7 +17,7 @@ class Links extends React.Component {
     return (
       <div className="row">
       <div className="col-xs-6">
-      <a href={"cadastros/" + this.props.title}>
+      <a href={this.props.title}>
       {this.props.nome} <br/> Cadastro </a>
       </div>
       </div>
@@ -46,7 +46,7 @@ class OpcoesEdit extends React.Component {
   render () {
     return (<div className="row">
     <div className="col-xs-6">
-    <a href={this.props.tipo +"/" + this.props.id + "/edit"}> {this.props.nome}</a>
+    <a href={this.props.tipo + '/' + this.props.id + '/edit'}> {this.props.nome}</a>
     </div>
     </div>)
   }
@@ -56,7 +56,7 @@ class OpcoesNew extends React.Component {
   render () {
     return (<div className="row">
     <div className="col-xs-6">
-    <a href={"/cadastros/id/" + this.props.tipo+"/new"}> {this.props.nome}</a>
+        <a href={'id/'+ this.props.tipo + '/new'}> {this.props.nome}</a>
     </div>
     </div>)
   }
