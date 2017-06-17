@@ -1,7 +1,7 @@
 var Welcome = React.createClass({
   render() {
     return (
-      <div className="bemvindo col-lg-6">
+      <div className="bemvindo">
       Bem vindo ao gerenciador de Usuários | Empresas da RN!
       </div>
     )
@@ -13,8 +13,8 @@ var Header = React.createClass({
   render() {
     return (
       <header>
-      <div className="navbar col-lg-6">
-      <a href="../" id="arrow" >&lsaquo;</a><p id="cadastro">Cadastro</p>
+      <div className="navbar">
+      <a href="../" id="arrow" >&lsaquo;</a>Cadastro
       </div>
       </header>
     )
@@ -25,12 +25,10 @@ var Header = React.createClass({
 class Links extends React.Component {
   render () {
     return (
-      <div className="row col-lg-6">
-      <div className=" ne-links">
-      <a href={this.props.title} >
-      {this.props.nome} <br/> Cadastro </a>
-      </div>
-      </div>
+      <a href={this.props.title} id={this.props.nome}  className=" ne-links">
+
+      {this.props.nome} <br/> Cadastro
+      </a>
     )
   }
 }
@@ -43,19 +41,19 @@ class Links extends React.Component {
 
 class cadastroMessage extends React.Component {
   render() {
-    return (<div className="row"><div className="row col-lg-6 opcao"><p>Cadastre {this.props.title} e faça parte da RN!</p><br/></div></div>)
+    return (<div className="opcao"><p>Cadastre {this.props.title} e faça parte da RN!</p><br/></div>)
   }
 }
 class editaMessage extends React.Component {
   render() {
-    return (<div className="row"><div className="row col-lg-6 opcao"><p>Edite {this.props.title} RN!</p><br/></div></div>)
+    return (<div className=" opcao"><p>Edite {this.props.title} RN!</p><br/></div>)
   }
 }
 
 class OpcoesEdit extends React.Component {
   render () {
     return (
-      <a href={this.props.tipo + '/' + this.props.id + '/edit'}>  <div className="row col-lg-6 links-cadastro" id={this.props.tipo}>
+      <a href={this.props.tipo + '/' + this.props.id + '/edit'}>  <div className=" links-cadastro" id={this.props.tipo}>
       {this.props.nome}
       </div></a>)
     }
@@ -64,7 +62,7 @@ class OpcoesEdit extends React.Component {
   class OpcoesNew extends React.Component {
     render () {
       return (
-        <a href={'id/'+ this.props.tipo + '/new'}>  <div className="row col-lg-6 links-cadastro" id={this.props.tipo}>
+        <a href={'id/'+ this.props.tipo + '/new'}>  <div className=" links-cadastro" id={this.props.tipo}>
         {this.props.nome}
         </div></a>)
       }

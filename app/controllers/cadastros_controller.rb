@@ -3,12 +3,8 @@ class CadastrosController < ApplicationController
 
 	end
 	def edit
-		if encontra_ultima_pessoa.blank?
-			flash[:alert] = "Parece não haver usuários no banco :("
-			redirect_to root_path
-		end
-		if encontra_ultima_empresa.blank?
-			flash[:alert] = "Parece não haver empresas no banco :("
+		if encontra_ultima_pessoa.blank? || encontra_ultima_empresa.blank?
+			flash[:notice] = "Parece não haver dados o suficiente no banco :("
 			redirect_to root_path
 		end
 	end
