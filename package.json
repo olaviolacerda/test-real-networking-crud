@@ -1,8 +1,10 @@
 {
-  "name": "desafio_real",
-  "private": true,
+  "name": "webpack-rails-example",
+  "version": "0.0.1",
+  "license": "MIT",
   "dependencies": {
-    "react-router": "^4.1.1",
-    "yard": "^1.0.3"
+    "stats-webpack-plugin": "^0.4.3",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
   }
 }

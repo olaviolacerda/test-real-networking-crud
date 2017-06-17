@@ -1,6 +1,3 @@
-
-
-
 var Header = React.createClass({
   render() {
     return (
@@ -9,7 +6,6 @@ var Header = React.createClass({
       <span className="arrow">&lsaquo;</span>
       <nav className="navbar">
       &#8287;<div className="cadastro">Cadastro </div>
-
       <div className="burg">
       <div className="bar"></div>
       <div className="bar"></div>
