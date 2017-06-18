@@ -1,4 +1,6 @@
 <%= render :partial => 'layouts/title'%>
 <%= react_component "Ato", ato:'editar', status:'cadastradas'; %>
-<%= react_component "OpcoesEdit", tipo: 'pessoas', id: @pessoa.id.to_s, nome: "Seu Cadastro";%>
-<%= react_component "OpcoesEdit", tipo: 'empresas', id: @empresa.id.to_s, nome: "Cadastro Empresa";%>
+<div class="divlinks">
+  <%= react_component "OpcoesEdit", tipo: 'pessoas', id: @pessoa.id.to_s, nome: "Seu Cadastro";%>
+  <%= react_component "OpcoesEdit", tipo: 'empresas', id: @empresa.id.to_s, nome: "Cadastro Empresa";%>
+</div>

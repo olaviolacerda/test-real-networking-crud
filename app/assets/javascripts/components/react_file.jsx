@@ -21,7 +21,7 @@ var Header = React.createClass({
   render() {
     return (
       <header >
-      <a className="col-xs-2" href="../" id="arrow" >&lsaquo;</a><span className="col-xs-6">Cadastro</span> <div className="col-xs-4">Burg</div>
+      <a className="col-xs-2" href="../" id="arrow" ><span className="glyphicon glyphicon-chevron-left"></span></a><span className="col-xs-6 cadastro">Cadastro</span> <div className="col-xs-4 burg"><i className="fa fa-bars"></i></div>
       </header>
     )
 
