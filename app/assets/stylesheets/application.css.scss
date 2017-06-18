@@ -44,7 +44,7 @@ header {
   text-transform: uppercase;
   margin-bottom: 1em;
 }
-.opcao, .bemvindo{
+.opcao, .bemvindo, .ato{
   color: darkgrey;
   padding-top: 1em;
   border-bottom: 0.1em solid darkgrey;
@@ -131,6 +131,7 @@ form  {
       border-color: darkgrey;
     }
   }
+
   input[type=submit] {
     width: 30%;
     border-style: none;
@@ -146,5 +147,37 @@ form  {
       transition: ease 0.5s;
     }
   }
+  input[value="Salvar Alterações"] {
+    width: 35%;
+    border-style: none;
+    border-radius: 1em;
+    color: #FFF;
+    text-decoration: none;
+    background-color: #17969E;
+    font-weight: bold;
+    float: right;
+    margin: 0 !important;
+    margin-right: 5em !important;
+    &:hover{
+      cursor: pointer;
+      opacity: 0.7;
+      transition: ease 0.5s;
+    }
+  }
 
+}
+
+a[data-method=delete]{
+  border-style: none;
+  border-radius: 1em;
+  color: #FFF;
+  text-decoration: none;
+  background-color: #c1243e;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20pt;
+  font-weight: bold;
+  outline: none;
+  margin-left: 2em;
+  padding: 0.3125em 1.3125em ;
+  clear: left;
 }

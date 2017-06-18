@@ -1,7 +1,4 @@
 <%= render :partial => 'layouts/title'%>
-
 <%= react_component("cadastroMessage", title:"seu usuário") %>
 <%= render 'erros'%>
-<%= react_component "OpcoesNew", tipo: 'pessoas', nome: "Seu Cadastro";%>
-<%= react_component "OpcoesNew", tipo: 'empresas', nome: "Cadastro Empresa";%>
 <%= render partial: "form", locals: { acao: "create", texto_acao: "Salvar"}%>

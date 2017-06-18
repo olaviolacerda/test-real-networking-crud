@@ -7,7 +7,15 @@ var Welcome = React.createClass({
     )
   }
 });
-
+var Ato = React.createClass({
+  render() {
+    return (
+      <div className="row ato">
+      Aqui você pode {this.props.ato} Usuários ou Empresas {this.props.status} na RN!
+      </div>
+    )
+  }
+});
 
 var Header = React.createClass({
   render() {
@@ -25,7 +33,7 @@ class Links extends React.Component {
     return (
       <a href={this.props.title} id={this.props.nome}  className=" ne-links">
       {this.props.nome} <br/> Cadastro
-      
+
       </a>
     )
   }
@@ -51,7 +59,7 @@ class editaMessage extends React.Component {
 class OpcoesEdit extends React.Component {
   render () {
     return (
-      <a href={this.props.tipo + '/' + this.props.id + '/edit'}  id={this.props.tipo}>  <div className="col-xs-6 links-cadastro">
+      <a href={this.props.tipo + '/' + this.props.id + '/edit'}  >  <div className="col-xs-6 links-cadastro" id={this.props.tipo}>
       {this.props.nome}
       </div></a>)
     }
