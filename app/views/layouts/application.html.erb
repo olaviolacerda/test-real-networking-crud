@@ -3,19 +3,16 @@
 <head>
   <title>Cadastro | RN</title>
   <%= csrf_meta_tags %>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </head>
 <body>
   <div class="container">
-    <div class="row">
-    <%= react_component ("Header")%>
-    <%= yield %>
+        <%= react_component ("Header")%>
+        <%= yield %>
   </div>
-</div>
 </body>
 <script type="text/javascript">
-console.log("Espero que eu consiga =)");
+  console.log("Espero que eu consiga =)");
 </script>
 </html>

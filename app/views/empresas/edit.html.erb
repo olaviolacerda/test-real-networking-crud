@@ -1,5 +1,7 @@
 <%= render :partial => 'layouts/title'%>
 <%= react_component("editaMessage", title:"sua empresa cadastrada na") %>
 <%= render 'erros'%>
+<%= react_component "OpcoesEdit", tipo: 'pessoas', id: @pessoa.id.to_s, nome: "Seu Cadastr";%>
+<%= react_component "OpcoesEdit", tipo: 'empresas', id: @empresa.id.to_s, nome: "Cadastro Empresa";%>
 <%= render partial: "form", locals: { acao: "update", texto_acao: "Salvar Alterações"}%>
 <%= link_to 'Deletar Empresa', cadastro_empresa_path(@empresa), method: :delete, data: { confirm: "Tem certeza que deseja remover #{@empresa.nome}?" } %>
